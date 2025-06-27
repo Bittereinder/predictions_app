@@ -6,9 +6,9 @@ DB_FILE = BASE_DIR / "predictions.db"
 SCHEMA = BASE_DIR / "schema.sql"
 
 def init_db():
-    """Function to create the database and tables"""
+    """Function to create the database and tables from schema"""
     try:
-        # Create the database
+        # Create/open the database
         with sqlite3.connect(DB_FILE) as conn:
             # Create a cursor object
             cursor = conn.cursor()
